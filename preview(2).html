@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panadería Migas | Panadería, pastelería y cafetería artesanal</title>
+  <meta name="description" content="Disfruta en Panadería Migas de pan recién hecho, bollería artesanal, tartas caseras, zumos naturales y desayunos con sabor tradicional." />
+  <meta property="og:title" content="Panadería Migas | Panadería, pastelería y cafetería artesanal" />
+  <meta property="og:description" content="Disfruta en Panadería Migas de pan recién hecho, bollería artesanal, tartas caseras, zumos naturales y desayunos con sabor tradicional." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE8bah0bdEiKqHFu3KSHkGcoLoWgFFbAAJFvFrbEWjT9xWoyvefUyfY14W_H17LWIlC35GSYQXyPBaQtZ7oGAE7WNK_Jcbjmo9tmTMtS0bmbYD-SW3Pg7IBYXJ2EYfbTIBw0odg=w1200-h900-k-no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Lato', sans-serif; background: #FFFDF8; color: #3A2418; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: 'Lato', sans-serif; }
+    ::selection { background: #C98A3D33; }
+
+    /* ── VARIABLES ────────────────────────────────────────────────────── */
+    :root {
+      --crema:    #FFF7EA;
+      --cafe:     #3A2418;
+      --caramelo: #C98A3D;
+      --blanco:   #FFFDF8;
+      --rojo:     #B93A32;
+      --verde:    #6F7D4F;
+      --cafe-mid: #6B4F3A;
+      --shadow-sm: 0 2px 16px rgba(58,36,24,.08);
+      --shadow-md: 0 8px 32px rgba(58,36,24,.14);
+      --shadow-lg: 0 20px 60px rgba(58,36,24,.18);
+      --radius:   14px;
+    }
+
+    /* ── TYPOGRAPHY ───────────────────────────────────────────────────── */
+    .serif { font-family: 'Playfair Display', serif; }
+    h1,h2,h3 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+
+    /* ── UTILITY ──────────────────────────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-pad { padding: 80px 0; }
+    .text-center { text-align: center; }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .badge-gold { background: #C98A3D22; color: var(--caramelo); border: 1px solid #C98A3D44; }
+    .badge-red  { background: #B93A3222; color: var(--rojo); }
+    .badge-green{ background: #6F7D4F22; color: var(--verde); }
+    .badge-dark { background: #3A241822; color: var(--cafe); }
+
+    /* ── BUTTONS ──────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 5px;
+      font-size: 15px; font-weight: 700; letter-spacing: .4px;
+      border: none; transition: transform .18s, background .2s, color .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--caramelo); color: var(--blanco); }
+    .btn-primary:hover { background: #a8702f; }
+    .btn-outline { background: transparent; color: var(--cafe); border: 2px solid var(--cafe); }
+    .btn-outline:hover { background: var(--cafe); color: var(--blanco); }
+    .btn-outline-light { background: transparent; color: var(--blanco); border: 2px solid var(--blanco); }
+    .btn-outline-light:hover { background: var(--blanco); color: var(--cafe); }
+    .btn-dark { background: var(--cafe); color: var(--crema); }
+    .btn-dark:hover { background: #5a3828; }
+
+    /* ── ANIMATIONS ───────────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { opacity: 0; }
+    .fade-up.visible { animation: fadeUp .65s ease forwards; }
+    .fade-up:nth-child(2) { animation-delay: .1s; }
+    .fade-up:nth-child(3) { animation-delay: .2s; }
+    .fade-up:nth-child(4) { animation-delay: .3s; }
+
+    /* ── HEADER ───────────────────────────────────────────────────────── */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(255,253,248,.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(58,36,24,.07);
+      transition: box-shadow .3s;
+    }
+    #header.scrolled { box-shadow: 0 2px 20px rgba(58,36,24,.1); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo { line-height: 1.1; }
+    .logo-top { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 21px; color: var(--cafe); }
+    .logo-sub { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 15px; color: var(--caramelo); letter-spacing: 2px; }
+    nav.desktop-nav { display: flex; align-items: center; gap: 30px; }
+    nav.desktop-nav a {
+      font-size: 13px; font-weight: 700; letter-spacing: .5px; color: var(--cafe);
+      position: relative; padding-bottom: 3px;
+      transition: color .2s;
+    }
+    nav.desktop-nav a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+      background: var(--caramelo); transition: width .25s;
+    }
+    nav.desktop-nav a:hover { color: var(--caramelo); }
+    nav.desktop-nav a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; padding: 8px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px; background: var(--cafe);
+      transition: transform .25s, opacity .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
+
+    #mobile-menu {
+      display: none;
+      background: var(--blanco);
+      border-top: 1px solid #e5d9cc;
+      padding: 12px 24px 24px;
+    }
+    #mobile-menu.open { display: block; }
+    #mobile-menu a {
+      display: block; padding: 14px 0; font-size: 17px; font-weight: 700;
+      color: var(--cafe); border-bottom: 1px solid #f0e8dc;
+      transition: color .2s;
+    }
+    #mobile-menu a:hover { color: var(--caramelo); }
+    #mobile-menu .btn { margin-top: 18px; width: 100%; justify-content: center; }
+
+    /* ── HERO ─────────────────────────────────────────────────────────── */
+    #inicio {
+      padding-top: 72px;
+      background: var(--crema);
+      min-height: 92vh;
+      display: flex; align-items: center;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      padding: 60px 0;
+    }
+    .hero-text h1 { font-size: clamp(36px, 5.5vw, 68px); color: var(--cafe); margin-bottom: 20px; }
+    .hero-text h1 em { color: var(--caramelo); font-style: italic; }
+    .hero-label { margin-bottom: 18px; }
+    .hero-sub { font-size: 17px; color: var(--cafe-mid); line-height: 1.75; max-width: 440px; margin-bottom: 34px; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 34px; }
+    .stat-card {
+      background: var(--blanco); border-radius: 10px; padding: 12px 16px;
+      box-shadow: var(--shadow-sm); text-align: center; min-width: 90px;
+    }
+    .stat-card .stat-icon { font-size: 20px; margin-bottom: 3px; }
+    .stat-card .stat-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 17px; color: var(--cafe); }
+    .stat-card .stat-lbl { font-size: 10px; color: var(--cafe-mid); text-transform: uppercase; letter-spacing: .5px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 20px; overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-float {
+      position: absolute; bottom: -14px; left: -14px;
+      background: var(--blanco); border-radius: 12px; padding: 12px 16px;
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-float .float-icon { font-size: 28px; }
+    .hero-float .float-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 13px; color: var(--cafe); }
+    .hero-float .float-sub { font-size: 11px; color: var(--cafe-mid); }
+
+    /* ── TRUST BAND ───────────────────────────────────────────────────── */
+    #trust {
+      background: var(--cafe);
+      padding: 36px 0;
+    }
+    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    .trust-item { text-align: center; padding: 8px 10px; }
+    .trust-icon { font-size: 30px; margin-bottom: 10px; }
+    .trust-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; color: var(--crema); margin-bottom: 6px; }
+    .trust-text { font-size: 12px; color: rgba(255,247,234,.65); line-height: 1.5; }
+
+    /* ── ESPECIALIDADES ───────────────────────────────────────────────── */
+    #especialidades { background: var(--blanco); }
+    .section-head { margin-bottom: 52px; }
+    .section-head h2 { font-size: clamp(26px,3.5vw,44px); color: var(--cafe); margin: 12px 0 14px; }
+    .section-head p { font-size: 16px; color: var(--cafe-mid); max-width: 500px; margin: 0 auto; }
+    .products-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+    .product-card {
+      background: var(--crema); border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform .25s, box-shadow .25s;
+      display: flex; flex-direction: column;
+    }
+    .product-card:hover { transform: translateY(-6px) rotate(-.3deg); box-shadow: var(--shadow-md); }
+    .product-img { aspect-ratio: 3/2; overflow: hidden; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .product-card:hover .product-img img { transform: scale(1.05); }
+    .product-body { padding: 18px 18px 22px; flex: 1; }
+    .product-body h3 { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--cafe); margin: 10px 0 8px; }
+    .product-body p { font-size: 13px; color: var(--cafe-mid); line-height: 1.6; }
+
+    /* ── EXPERIENCIA ──────────────────────────────────────────────────── */
+    #experiencia { background: var(--crema); }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .exp-text h2 { font-size: clamp(24px,3vw,40px); color: var(--cafe); margin: 14px 0 18px; }
+    .exp-text h2 em { color: var(--caramelo); }
+    .exp-text p { font-size: 15px; color: var(--cafe-mid); line-height: 1.8; margin-bottom: 16px; }
+    .mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 240px 200px; gap: 12px; }
+    .mosaic-item { border-radius: 14px; overflow: hidden; }
+    .mosaic-item img { width: 100%; height: 100%; object-fit: cover; }
+    .mosaic-item.span-row { grid-row: 1 / 3; }
+
+    /* ── GALERÍA ──────────────────────────────────────────────────────── */
+    #galeria { background: var(--blanco); padding: 60px 0; }
+    #galeria h2 { font-size: clamp(22px,3vw,36px); color: var(--cafe); margin-bottom: 32px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .gallery-grid .gal-item { border-radius: 14px; overflow: hidden; aspect-ratio: 4/3; box-shadow: var(--shadow-sm); }
+    .gallery-grid .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-grid .gal-item:hover img { transform: scale(1.05); }
+
+    /* ── POR QUÉ ──────────────────────────────────────────────────────── */
+    #porque { background: var(--blanco); }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .why-card {
+      background: var(--crema); border-radius: var(--radius); padding: 28px 22px;
+      border-left: 4px solid var(--caramelo);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+    .why-icon { font-size: 30px; margin-bottom: 12px; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--cafe); margin-bottom: 8px; }
+    .why-card p { font-size: 13px; color: var(--cafe-mid); line-height: 1.65; }
+
+    /* ── SOBRE NOSOTROS ───────────────────────────────────────────────── */
+    #nosotros { background: var(--cafe); padding: 72px 0; }
+    .nosotros-inner { max-width: 740px; margin: 0 auto; text-align: center; }
+    .nosotros-inner blockquote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(18px,2.5vw,26px); color: var(--crema); line-height: 1.7; margin-bottom: 24px;
+    }
+    .nosotros-inner p { font-size: 15px; color: rgba(255,247,234,.65); line-height: 1.8; }
+
+    /* ── OPINIONES ────────────────────────────────────────────────────── */
+    #opiniones { background: var(--blanco); }
+    .rating-header { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 14px 0 6px; }
+    .stars { display: flex; gap: 3px; }
+    .star { font-size: 20px; color: var(--caramelo); }
+    .star.empty { color: #ddd; }
+    .rating-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px; color: var(--cafe); }
+    .rating-count { font-size: 14px; color: var(--cafe-mid); }
+    .rating-source { font-size: 12px; color: #aaa; margin-bottom: 42px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-bottom: 28px; }
+    .review-card {
+      background: var(--crema); border-radius: var(--radius); padding: 26px 22px;
+      box-shadow: var(--shadow-sm); position: relative;
+      transition: transform .2s;
+    }
+    .review-card:hover { transform: translateY(-4px); }
+    .review-card::before {
+      content: '"'; position: absolute; top: 12px; right: 18px;
+      font-family: serif; font-size: 60px; color: var(--caramelo); opacity: .18; line-height: 1;
+    }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .review-stars span { font-size: 15px; color: var(--caramelo); }
+    .review-text { font-size: 13px; color: var(--cafe-mid); line-height: 1.7; margin-bottom: 16px; }
+    .review-author { font-weight: 700; font-size: 13px; color: var(--cafe); }
+    .reviews-note { font-style: italic; font-size: 14px; color: var(--cafe-mid); }
+
+    /* ── HORARIO ──────────────────────────────────────────────────────── */
+    #horario { background: var(--crema); }
+    .horario-card {
+      max-width: 640px; margin: 0 auto;
+      background: var(--blanco); border-radius: var(--radius);
+      padding: 40px 36px; box-shadow: var(--shadow-sm);
+    }
+    .horario-open {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 24px;
+      padding-bottom: 24px; border-bottom: 1px solid #e5d9cc;
+    }
+    .horario-icon { font-size: 40px; }
+    .horario-open-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: var(--cafe); }
+    .horario-open-sub { font-size: 13px; color: var(--cafe-mid); }
+    .horario-items { display: flex; flex-direction: column; gap: 12px; }
+    .horario-item { display: flex; gap: 12px; align-items: flex-start; }
+    .horario-item .hi-icon { font-size: 20px; flex-shrink: 0; }
+    .horario-item .hi-text { font-size: 14px; color: var(--cafe-mid); line-height: 1.5; }
+
+    /* ── CONTACTO ─────────────────────────────────────────────────────── */
+    #contacto { background: var(--blanco); }
+    .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; }
+    .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cafe); margin-bottom: 24px; }
+    .contact-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .ci-icon-wrap {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      background: var(--crema);
+      border: 1.5px solid #e5d9cc;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--caramelo);
+    }
+    .ci-label { font-size: 11px; font-weight: 700; color: var(--caramelo); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 3px; }
+    .ci-val { font-size: 15px; color: var(--cafe); padding-top: 2px; }
+    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cafe); margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--cafe-mid); letter-spacing: .5px; text-transform: uppercase; margin-bottom: 6px; }
+    .form-group input,
+    .form-group textarea {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #e5d9cc; border-radius: 7px;
+      font-family: 'Lato', sans-serif; font-size: 15px;
+      background: var(--blanco); color: var(--cafe); outline: none;
+      transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--caramelo); }
+    .form-group textarea { resize: vertical; }
+    .form-success {
+      display: none; background: #6F7D4F22; border: 1px solid #6F7D4F44;
+      border-radius: 12px; padding: 28px; text-align: center;
+    }
+    .form-success .fs-icon { font-size: 40px; margin-bottom: 12px; }
+    .form-success .fs-title { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--cafe); margin-bottom: 8px; }
+    .form-success .fs-text { font-size: 14px; color: var(--cafe-mid); }
+
+    /* ── CTA FINAL ────────────────────────────────────────────────────── */
+    #cta-final {
+      position: relative; overflow: hidden;
+      min-height: 400px; display: flex; align-items: center;
+    }
+    .cta-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .cta-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(34,18,8,.92), rgba(34,18,8,.65));
+    }
+    .cta-content {
+      position: relative; text-align: center;
+      padding: 64px 24px;
+    }
+    .cta-content h2 {
+      font-size: clamp(28px,4.5vw,52px); color: var(--crema);
+      margin-bottom: 18px; line-height: 1.2;
+    }
+    .cta-content h2 em { color: var(--caramelo); }
+    .cta-content p { font-size: 17px; color: rgba(255,247,234,.82); line-height: 1.7; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── FOOTER ───────────────────────────────────────────────────────── */
+    footer { background: #221510; padding: 56px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .fb-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 22px; color: var(--crema); }
+    .footer-brand .fb-sub  { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: var(--caramelo); letter-spacing: 2px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 13px; color: rgba(255,247,234,.5); line-height: 1.7; max-width: 270px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--caramelo); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+    .footer-col a, .footer-col .fc-item {
+      display: block; font-size: 13px; color: rgba(255,247,234,.55);
+      margin-bottom: 10px; transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--crema); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,247,234,.1); padding-top: 24px;
+      display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { font-size: 12px; color: rgba(255,247,234,.3); }
+    .footer-notice { max-width: 460px; text-align: right; }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(2,1fr); }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      nav.desktop-nav, .header-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-float { bottom: 12px; left: 12px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .exp-grid { grid-template-columns: 1fr; gap: 36px; }
+      .mosaic { grid-template-rows: 200px 180px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contacto-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-notice { text-align: left; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { justify-content: center; }
+      .products-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .trust-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .mosaic { grid-template-columns: 1fr; grid-template-rows: 200px 180px 160px; }
+      .mosaic-item.span-row { grid-row: auto; }
+      .hero-stats { gap: 10px; }
+      .stat-card { min-width: 80px; padding: 10px 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ HEADER ══ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+      <a href="#inicio" class="logo" aria-label="Panadería Migas - Inicio">
+        <div class="logo-top">Panadería</div>
+        <div class="logo-sub">Migas</div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#nosotros">Sobre nosotros</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#horario">Horario</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn-primary header-cta">📍 Cómo llegar</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" role="navigation" aria-label="Menú móvil">
+    <a href="#inicio">Inicio</a>
+    <a href="#especialidades">Especialidades</a>
+    <a href="#nosotros">Sobre nosotros</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#horario">Horario</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn btn-primary">📍 Cómo llegar</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ HERO ═══ -->
+<section id="inicio">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Texto -->
+      <div class="hero-text">
+        <div class="hero-label">
+          <span class="badge badge-gold">Panadería · Pastelería · Cafetería de barrio</span>
+        </div>
+        <h1>Sabor artesanal<br><em>cada mañana</em></h1>
+        <p class="hero-sub">Pan recién hecho, bollería del día, tartas caseras y cafés preparados con el cariño de siempre.</p>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-val">3.9/5</div>
+            <div class="stat-lbl">en Google</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💬</div>
+            <div class="stat-val">381</div>
+            <div class="stat-lbl">reseñas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">€</div>
+            <div class="stat-val">1–10€</div>
+            <div class="stat-lbl">por persona</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🕗</div>
+            <div class="stat-val">8:30</div>
+            <div class="stat-lbl">apertura</div>
+          </div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="#especialidades" class="btn btn-primary">Ver especialidades →</a>
+          <a href="#contacto" class="btn btn-outline">📍 Cómo llegar</a>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="hero-img-wrap">
+        <img
+          src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE8bah0bdEiKqHFu3KSHkGcoLoWgFFbAAJFvFrbEWjT9xWoyvefUyfY14W_H17LWIlC35GSYQXyPBaQtZ7oGAE7WNK_Jcbjmo9tmTMtS0bmbYD-SW3Pg7IBYXJ2EYfbTIBw0odg=w1200-h900-k-no"
+          alt="Vitrina de productos artesanales de Panadería Migas"
+          width="800" height="600"
+        />
+        <div class="hero-float">
+          <div class="float-icon">🥐</div>
+          <div>
+            <div class="float-title">Elaboración artesanal</div>
+            <div class="float-sub">Fresco cada mañana</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ TRUST BAND ══ -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item fade-up">
+        <div class="trust-icon">🌾</div>
+        <div class="trust-title">Elaboración artesanal</div>
+        <div class="trust-text">Productos preparados con ingredientes de calidad y técnicas tradicionales.</div>
+      </div>
+      <div class="trust-item fade-up">
+        <div class="trust-icon">☀️</div>
+        <div class="trust-title">Desayunos y meriendas</div>
+        <div class="trust-text">Abrimos temprano para que empieces el día con el mejor sabor.</div>
+      </div>
+      <div class="trust-item fade-up">
+        <div class="trust-icon">🍰</div>
+        <div class="trust-title">Dulces y salados</div>
+        <div class="trust-text">Para todos los gustos, desde bollería hasta opciones saladas.</div>
+      </div>
+      <div class="trust-item fade-up">
+        <div class="trust-icon">💰</div>
+        <div class="trust-title">€1–10 por persona</div>
+        <div class="trust-text">Buena relación calidad-precio, al alcance de todos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ ESPECIALIDADES ══ -->
+<section id="especialidades" class="section-pad">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="badge badge-gold">Lo mejor de la vitrina</span>
+      <h2>Nuestras especialidades</h2>
+      <p>Dulces, panes y productos salados preparados para disfrutar desde primera hora.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIKWY2sqvLIM7cwvEQCEi97WF0CObuM-cE7AbjuKFOVJ8w3ozzYR30jI4BQg4dj4EfnQUD2mae90Ayc2xqVLaxtgBflCDsZdvxjMnbUCM4wA4x7UVE5CKTYQgKzIwBDoukThmX=w1200-h900-k-no" alt="Tarta casera de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-red">Especialidad</span>
+          <h3>Tarta de queso</h3>
+          <p>Cremosa, suave y perfecta para acompañar con un café. Una de las favoritas del local.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfghfLMCdcpd54CMbsu-o6CnvmcoxtIiQysurK5soCsM48qUhcG0m1PHPT9IFEcZNt9vqp2nKCISKt_ivzYKrx7EZC7LKbF_jh2ldeOTs7bAAx-nwC9yLVVGoAQieOMyFApAUohw=w1200-h900-k-no" alt="Bollería artesanal recién preparada en Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-gold">Recién hecho</span>
+          <h3>Bollería del día</h3>
+          <p>Recién salida del horno cada mañana. Para desayunos, meriendas o para llevar a casa.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKoyp2BT0VcSkjIGplzyxJOCOWPOblA0BGVKjkkTNfaHwzE73brJbPZ0rHpehYo7kt7RB9RVWlKgMwHH5BrKoZhwsvWgL1T7yw4Pb3hD50z9JNs5QeEotKHzgMlEnk1vBNFxeZ=w1200-h900-k-no" alt="Dulce artesanal para desayuno o merienda en Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-dark">Clásico</span>
+          <h3>Palmeritas</h3>
+          <p>Crujientes y doradas, uno de esos clásicos que nunca fallan. Perfectas para acompañar cualquier bebida.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHm7ScdnFlRzpBX20deN5K2RYl_lVvclXAe4gxZ2JjPszB8lHiUrbgzC32WfcHclIcQvLB_VrarcZQW4mfFl7NM474uZVv0mt6N0cUXBJFRAe4aCzciTsSOQfiJTYKYcZpfhiQ=w1200-h900-k-no" alt="Producto dulce artesanal de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-red">Pastelería</span>
+          <h3>Corazón de fresas con crema</h3>
+          <p>Dulce, fresco y con ese punto de alegría que lo hace irresistible en cualquier momento.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEEyQdAkJqh9jaTfE-B8kRWPo8kgaHrTFFxmipnsXlUSH4e2FVyvkkzfx4Qwp2q7D4vQym9R7Oc_NZfpnuaiMytoGlx0SJdgRIcOryxczKvdHr9LOoJzcWM5z6OpRXbKEjctVnh=w1200-h900-k-no" alt="Selección de productos artesanales de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-gold">Temporada</span>
+          <h3>Roscón de Reyes</h3>
+          <p>Elaboración tradicional, con nata suave y ese sabor casero que lo hace especial. Un clásico irrepetible.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNa_5pJGNw4OvQ0rILaL4cGHPcPMLYehSuzx15qTPjDZE7YzysEE4ggtbhHYkDO0thp2DQuJZflJ_9HTgLWud_Jl_lSa31GHSunYbYIdvU55YY3bHuPMyEIL_tQtVO5ksL6qDM=w1200-h900-k-no" alt="Vitrina con dulces y pastelería artesanal de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-dark">Artesanal</span>
+          <h3>Pan artesanal</h3>
+          <p>Corteza crujiente, miga sabrosa. El pan de siempre, elaborado con el proceso que merece.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8efow6m-dK4nnmtU-JhQ-s52IpHHzHaB2CyIAzpUYzQy4euAkGa_kK9QdnrEr3CA831TIaA3G06PG2GleaE-eGm6DDf3WxABWOiqcyO6WzKNFVaMEDyqDfZ2iQjXSaxIIrFgQ4A=w1200-h900-k-no" alt="Especialidad salada de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-green">Salado</span>
+          <h3>Croissants y salados</h3>
+          <p>Tortilla, croissants salados y más opciones para quienes prefieren empezar el día de otra manera.</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up">
+        <div class="product-img">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhBmxi1qniuGT5Jv-1fXXdcpfpj0B0aPejarqxcUgO3Ej2vdYF6Kn3Y_24nx9HBAhK_5Og3_vSDKfVyhlXcxyqcBGEP3UDvm6Oqj2kYMmQalX7BxATkGcTSxUw9UmfpfMPDQczMcQrROTe=w1200-h900-k-no" alt="Interior y ambiente de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="badge badge-green">Natural</span>
+          <h3>Zumo natural de frutas</h3>
+          <p>Fresco, natural y preparado al momento. El complemento perfecto para un buen desayuno.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ EXPERIENCIA ══ -->
+<section id="experiencia" class="section-pad">
+  <div class="container">
+    <div class="exp-grid">
+      <div class="exp-text fade-up">
+        <span class="badge badge-gold">Nuestro rincón</span>
+        <h2>Un lugar para<br><em style="color:var(--caramelo)">empezar bien el día</em></h2>
+        <p>En Panadería Migas queremos que cada visita tenga ese sabor de los negocios de siempre: buen producto, trato cercano y una vitrina llena de opciones para desayunar, merendar o llevar a casa.</p>
+        <p>Cada mañana trabajamos para ofrecer productos frescos, sabrosos y pensados para disfrutar sin complicaciones. Porque lo artesanal y lo cercano siempre tienen un lugar.</p>
+      </div>
+      <div class="mosaic fade-up">
+        <div class="mosaic-item span-row">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhBmxi1qniuGT5Jv-1fXXdcpfpj0B0aPejarqxcUgO3Ej2vdYF6Kn3Y_24nx9HBAhK_5Og3_vSDKfVyhlXcxyqcBGEP3UDvm6Oqj2kYMmQalX7BxATkGcTSxUw9UmfpfMPDQczMcQrROTe=w1200-h900-k-no" alt="Interior y ambiente de Panadería Migas" loading="lazy" />
+        </div>
+        <div class="mosaic-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfghfLMCdcpd54CMbsu-o6CnvmcoxtIiQysurK5soCsM48qUhcG0m1PHPT9IFEcZNt9vqp2nKCISKt_ivzYKrx7EZC7LKbF_jh2ldeOTs7bAAx-nwC9yLVVGoAQieOMyFApAUohw=w1200-h900-k-no" alt="Bollería artesanal recién preparada en Panadería Migas" loading="lazy" />
+        </div>
+        <div class="mosaic-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKoyp2BT0VcSkjIGplzyxJOCOWPOblA0BGVKjkkTNfaHwzE73brJbPZ0rHpehYo7kt7RB9RVWlKgMwHH5BrKoZhwsvWgL1T7yw4Pb3hD50z9JNs5QeEotKHzgMlEnk1vBNFxeZ=w1200-h900-k-no" alt="Dulce artesanal para desayuno en Panadería Migas" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ GALERÍA ══ -->
+<section id="galeria">
+  <div class="container text-center">
+    <h2 class="fade-up">Así es nuestra vitrina</h2>
+    <div class="gallery-grid">
+      <div class="gal-item fade-up">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNa_5pJGNw4OvQ0rILaL4cGHPcPMLYehSuzx15qTPjDZE7YzysEE4ggtbhHYkDO0thp2DQuJZflJ_9HTgLWud_Jl_lSa31GHSunYbYIdvU55YY3bHuPMyEIL_tQtVO5ksL6qDM=w1200-h900-k-no" alt="Vitrina con dulces y pastelería artesanal de Panadería Migas" loading="lazy" />
+      </div>
+      <div class="gal-item fade-up">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIKWY2sqvLIM7cwvEQCEi97WF0CObuM-cE7AbjuKFOVJ8w3ozzYR30jI4BQg4dj4EfnQUD2mae90Ayc2xqVLaxtgBflCDsZdvxjMnbUCM4wA4x7UVE5CKTYQgKzIwBDoukThmX=w1200-h900-k-no" alt="Tarta casera de Panadería Migas" loading="lazy" />
+      </div>
+      <div class="gal-item fade-up">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHm7ScdnFlRzpBX20deN5K2RYl_lVvclXAe4gxZ2JjPszB8lHiUrbgzC32WfcHclIcQvLB_VrarcZQW4mfFl7NM474uZVv0mt6N0cUXBJFRAe4aCzciTsSOQfiJTYKYcZpfhiQ=w1200-h900-k-no" alt="Producto dulce artesanal de Panadería Migas" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════ POR QUÉ ELEGIRNOS ═ -->
+<section id="porque" class="section-pad">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="badge badge-gold">Razones reales</span>
+      <h2>¿Por qué volver a Panadería Migas?</h2>
+      <p>Hay razones que hablan solas. Aquí van las nuestras.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">🌿</div>
+        <h3>Sabor tradicional</h3>
+        <p>Recetas que respetan el proceso artesanal. Sin prisas, sin atajos, con el resultado de siempre.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">😊</div>
+        <h3>Trato cercano</h3>
+        <p>Personal que te recibe de buenas y se acuerda de lo que te gusta. El valor de un comercio de barrio.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🥐</div>
+        <h3>Para todos los momentos</h3>
+        <p>Dulce para el desayuno, salado para el almuerzo, bollería para la merienda. Aquí siempre hay algo.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">💛</div>
+        <h3>Precio honesto</h3>
+        <p>De €1 a €10 por persona. Calidad que se nota y precio que no duele. Así debe ser.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🏘️</div>
+        <h3>Local de barrio</h3>
+        <p>Ese negocio que da carácter al vecindario y al que apetece volver porque sabes lo que te espera.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🛍️</div>
+        <h3>Para llevar o quedarse</h3>
+        <p>Compra lo que necesitas o tómate un momento. Aquí hay sitio para los dos planes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ SOBRE NOSOTROS ══ -->
+<section id="nosotros">
+  <div class="container">
+    <div class="nosotros-inner fade-up">
+      <span class="badge" style="background:#C98A3D44;color:var(--caramelo);margin-bottom:20px;display:inline-block">Nuestra historia</span>
+      <blockquote>
+        "Panadería Migas es ese tipo de lugar al que apetece volver: por el olor a pan recién hecho, por la bollería de siempre, por las tartas caseras y por la sensación de estar comprando en un negocio cercano."
+      </blockquote>
+      <p>Cada mañana trabajamos para ofrecer productos frescos, sabrosos y pensados para disfrutar sin complicaciones. Porque creemos que lo artesanal y lo cercano siempre tienen un lugar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ OPINIONES ══ -->
+<section id="opiniones" class="section-pad">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="badge badge-gold">Lo que dicen los clientes</span>
+      <h2>Opiniones reales</h2>
+      <div class="rating-header">
+        <div class="stars" aria-label="Valoración 3.9 de 5 estrellas">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star empty">☆</span>
+        </div>
+        <span class="rating-val">3.9</span>
+        <span class="rating-count">de 5 · 381 reseñas</span>
+      </div>
+      <div class="rating-source">Basado en opiniones públicas de Google Maps</div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-text">La calidad del pan y la bollería es notable: se nota que hay mimo en la elaboración. El personal es muy amable y siempre hay algo rico en la vitrina para empezar bien el día.</p>
+        <div class="review-author">— Cliente habitual</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-text">El roscón de Reyes es de los mejores que he probado. La nata, la presentación y el sabor casero hacen que valga la pena venir especialmente por él. Una auténtica delicia.</p>
+        <div class="review-author">— Cliente satisfecho</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span style="color:#ddd">★</span><span style="color:#ddd">★</span>
+        </div>
+        <p class="review-text">Los dulces están muy bien y la atención es buena. Echo de menos algo más de variedad en salado y que indiquen alérgenos con más claridad. En lo demás, cumple con creces.</p>
+        <div class="review-author">— Opinión constructiva</div>
+      </div>
+    </div>
+
+    <p class="reviews-note text-center">"Las opiniones ayudan a seguir mejorando cada día."</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ HORARIO ═══ -->
+<section id="horario" class="section-pad">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="badge badge-gold">Horario</span>
+      <h2>¿Cuándo visitarnos?</h2>
+    </div>
+    <div class="horario-card fade-up">
+      <div class="horario-open">
+        <div class="horario-icon">🕗</div>
+        <div>
+          <div class="horario-open-val">Apertura desde las 8:30 h</div>
+          <div class="horario-open-sub">Ideal para desayunos tempraneros</div>
+        </div>
+      </div>
+      <div class="horario-items">
+        <div class="horario-item">
+          <span class="hi-icon">☕</span>
+          <span class="hi-text">Ideal para desayunos, meriendas y compras del día</span>
+        </div>
+        <div class="horario-item">
+          <span class="hi-icon">👥</span>
+          <span class="hi-text">En horas punta puede haber mayor afluencia, especialmente a primera hora</span>
+        </div>
+        <div class="horario-item">
+          <span class="hi-icon">📋</span>
+          <span class="hi-text">Horario completo pendiente de confirmar — consulta directamente con el local para más información</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CONTACTO ════ -->
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="badge badge-gold">Encuéntranos</span>
+      <h2>Contacto y ubicación</h2>
+    </div>
+    <div class="contacto-grid">
+
+      <div class="contact-info fade-up">
+        <h3>Información del local</h3>
+        <div class="contact-items">
+
+          <div class="contact-item">
+            <span class="ci-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <div class="ci-label">Dirección</div>
+              <div class="ci-val">C. de los Ángeles, 2, 28944 Fuenlabrada, Madrid</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="ci-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.55 5.55l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div>
+              <div class="ci-label">Teléfono</div>
+              <div class="ci-val"><a href="tel:+34916000318">916 00 03 18</a></div>
+            </div>
+          </div>
+
+
+          <div class="contact-item">
+            <span class="ci-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div>
+              <div class="ci-label">Apertura visible</div>
+              <div class="ci-val">Desde las 8:30 h</div>
+            </div>
+          </div>
+
+        </div>
+        <a href="https://www.google.com/maps/search/Panadería+Migas+C.+de+los+Ángeles+2+Fuenlabrada" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ver en Google Maps
+        </a>
+      </div>
+
+      <div class="contact-form fade-up">
+        <h3>Contacta con el local</h3>
+        <div class="horario-card" style="margin:0; max-width:none;">
+          <div class="horario-open" style="align-items:flex-start;">
+            <div class="horario-icon">📞</div>
+            <div>
+              <div class="horario-open-val">Llama directamente</div>
+              <div class="horario-open-sub">No hay WhatsApp confirmado para este teléfono.</div>
+            </div>
+          </div>
+          <p style="font-size:15px;color:var(--cafe-mid);line-height:1.7;margin-bottom:22px;">
+            Para pedidos, reservas o consultas, lo más fiable es llamar al local o acercarte directamente a la panadería.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="tel:+34916000318" class="btn btn-primary">📞 Llamar ahora</a>
+            <a href="https://www.google.com/maps/search/Panadería+Migas+C.+de+los+Ángeles+2+Fuenlabrada" target="_blank" rel="noopener noreferrer" class="btn btn-outline">📍 Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════ CTA FINAL ════ -->
+<section id="cta-final">
+  <img
+    class="cta-bg"
+    src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEEyQdAkJqh9jaTfE-B8kRWPo8kgaHrTFFxmipnsXlUSH4e2FVyvkkzfx4Qwp2q7D4vQym9R7Oc_NZfpnuaiMytoGlx0SJdgRIcOryxczKvdHr9LOoJzcWM5z6OpRXbKEjctVnh=w1200-h900-k-no"
+    alt="Selección de productos artesanales de Panadería Migas"
+    loading="lazy"
+  />
+  <div class="cta-overlay"></div>
+  <div class="container cta-content">
+    <h2>Ven a disfrutar<br><em>el sabor de siempre</em></h2>
+    <p>Dulces, pan, café y productos recién preparados te esperan cada mañana en Panadería Migas.</p>
+    <div class="cta-btns">
+      <a href="#contacto" class="btn btn-primary">📍 Cómo llegar</a>
+      <a href="#especialidades" class="btn btn-outline-light">Ver especialidades</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ FOOTER ════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-name">Panadería</div>
+        <div class="fb-sub">Migas</div>
+        <p>Panadería, pastelería y cafetería de barrio. Elaboración artesanal, trato cercano y productos frescos cada mañana.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#nosotros">Sobre nosotros</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#horario">Horario</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <span class="fc-item">📍 C. de los Ángeles, 2, 28944 Fuenlabrada, Madrid</span>
+        <span class="fc-item">📞 916 00 03 18</span>
+        <span class="fc-item">🕗 Apertura desde las 8:30</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Panadería Migas. Todos los derechos reservados.</p>
+      <p class="footer-notice">Información basada en datos públicos disponibles y preparada para ser completada por el negocio.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════ JAVASCRIPT ═════ -->
+<script>
+  // ── Año actual ──────────────────────────────────────────────────────
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── Header scroll ───────────────────────────────────────────────────
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ── Menú hamburguesa ────────────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Cerrar al hacer clic en un enlace del menú móvil
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // ── Animaciones de entrada con IntersectionObserver ─────────────────
+  const fadeEls = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(el => observer.observe(el));
+
+  // ── Fallback imagen ─────────────────────────────────────────────────
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.background = 'linear-gradient(135deg, #C98A3D22, #3A241822)';
+      this.style.minHeight = '180px';
+      this.removeAttribute('src');
+      this.setAttribute('alt', 'Panadería Migas · Imagen no disponible');
+    });
+  });
+</script>
+
+</body>
+</html>
