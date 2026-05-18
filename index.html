@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HONEY HAIR Estilistas | Peluquería y Salón de Belleza en Fuenlabrada</title>
+  <meta name="description" content="Salón de peluquería especialista en color, extensiones, tratamientos y maquillaje para eventos en Fuenlabrada, Madrid. Valoración 4.9/5 con más de 150 reseñas. Reserva tu cita ahora." />
+  <meta name="keywords" content="peluquería Fuenlabrada, salón de belleza Fuenlabrada, coloración capilar Fuenlabrada, extensiones pelo Fuenlabrada, maquillaje eventos Fuenlabrada" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://honeyhairestilistas.com/" />
+  <meta property="og:title" content="HONEY HAIR Estilistas | Peluquería en Fuenlabrada" />
+  <meta property="og:description" content="Especialistas en color, extensiones y transformación capilar. 4.9/5 en más de 150 reseñas. Fuenlabrada, Madrid." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://honeyhairestilistas.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "HONEY HAIR Estilistas",
+    "url": "https://honeyhairestilistas.com",
+    "telephone": "+34618400107",
+    "email": "honeyhairestilistas1@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. de las Panaderas, 1",
+      "addressLocality": "Fuenlabrada",
+      "postalCode": "28944",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 40.2794636, "longitude": -3.7979191 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5" },
+    "priceRange": "€€",
+    "hasMap": "https://maps.google.com/?q=C.+de+las+Panaderas,+1,+28944+Fuenlabrada,+Madrid"
+  }
+  </script>
+  <style>
+    :root {
+      --cream:       #FDFAF5;
+      --cream-mid:   #F5EFE3;
+      --cream-deep:  #EDE3D1;
+      --gold:        #C9A96E;
+      --gold-light:  #E8D5B0;
+      --gold-deep:   #A07840;
+      --noir:        #1A1714;
+      --noir-soft:   #2C2822;
+      --charcoal:    #4A4540;
+      --warm-gray:   #9A928A;
+      --white:       #FFFFFF;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --radius-xl:   32px;
+      --shadow-sm:   0 2px 8px rgba(26,23,20,0.06);
+      --shadow-md:   0 6px 24px rgba(26,23,20,0.10);
+      --shadow-lg:   0 16px 48px rgba(26,23,20,0.14);
+      --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --nav-height:  72px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--noir); line-height: 1.7; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, textarea, select { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .display-xl { font-family: var(--font-display); font-size: clamp(3.2rem, 8vw, 7rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; }
+    .display-lg { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.1; }
+    .display-md { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.2; }
+    .label-gold { font-family: var(--font-body); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .body-lg { font-size: 1.1rem; line-height: 1.8; color: var(--charcoal); }
+    .body-md { font-size: 0.95rem; line-height: 1.7; color: var(--warm-gray); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+    .section { padding: clamp(4rem, 10vw, 8rem) 0; }
+    .section-sm { padding: clamp(2rem, 5vw, 4rem) 0; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 2rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.5rem; }
+    .text-center { text-align: center; }
+
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 100px; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; transition: var(--transition); white-space: nowrap; }
+    .btn-primary { background: var(--noir); color: var(--white); }
+    .btn-primary:hover { background: var(--noir-soft); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-gold { background: var(--gold); color: var(--white); }
+    .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(201,169,110,0.35); }
+    .btn-outline { background: transparent; color: var(--noir); border: 1.5px solid var(--noir); }
+    .btn-outline:hover { background: var(--noir); color: var(--white); transform: translateY(-1px); }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.6); }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+    .btn-lg { padding: 1.1rem 2.5rem; font-size: 1rem; }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-height); display: flex; align-items: center; transition: background var(--transition), box-shadow var(--transition); }
+    .nav.scrolled { background: rgba(253,250,245,0.95); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(26,23,20,0.08); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--noir); letter-spacing: 0.05em; display: flex; flex-direction: column; line-height: 1; }
+    .nav-logo span { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-family: var(--font-body); font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.825rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--charcoal); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
+    .nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--noir); transition: var(--transition); }
+    .mobile-nav { display: none; position: fixed; inset: 0; z-index: 99; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: var(--font-display); font-size: 2.2rem; font-weight: 300; color: var(--noir); transition: color var(--transition); }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--charcoal); cursor: pointer; }
+
+    /* HERO */
+    .hero { min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+    .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: calc(var(--nav-height) + 4rem) clamp(1.5rem, 5vw, 4rem) 5rem; position: relative; z-index: 2; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; }
+    .hero-tag-line { width: 40px; height: 1px; background: var(--gold); }
+    .hero-title { margin-bottom: 1.5rem; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-desc { max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-rating { display: flex; align-items: center; gap: 0.75rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-deep); }
+    .hero-stars { display: flex; gap: 3px; color: var(--gold); }
+    .hero-stars svg { width: 14px; height: 14px; fill: currentColor; }
+    .hero-rating-text { font-size: 0.85rem; color: var(--charcoal); }
+    .hero-rating-text strong { color: var(--noir); }
+    .hero-right { position: relative; background: var(--cream-mid); overflow: hidden; }
+    .hero-right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .hero-right::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(253,250,245,0.15) 0%, transparent 30%); pointer-events: none; z-index: 1; }
+    .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 3; color: var(--warm-gray); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    /* SECTION HEADERS */
+    .section-header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .section-header .label-gold { margin-bottom: 0.75rem; }
+    .divider { width: 60px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
+    .divider-left { margin-left: 0; }
+
+    /* ABOUT */
+    .about { background: var(--white); }
+    .about-grid { align-items: center; gap: clamp(2rem, 6vw, 5rem); }
+    .about-image-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--cream-mid); }
+    .about-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .about-badge { position: absolute; bottom: -1px; right: -1px; background: var(--noir); color: var(--white); padding: 1.5rem 2rem; border-radius: var(--radius-lg) 0 var(--radius-lg) 0; }
+    .about-badge-num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 300; line-height: 1; color: var(--gold); }
+    .about-badge-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .about-content { padding: 1rem 0; }
+    .about-values { display: flex; gap: 2rem; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--cream-deep); }
+    .about-value { flex: 1; }
+    .about-value-num { font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--gold); line-height: 1; }
+    .about-value-label { font-size: 0.75rem; color: var(--warm-gray); margin-top: 0.25rem; }
+
+    /* SERVICES */
+    .services { background: var(--cream); }
+    .service-card { background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem 2rem; box-shadow: var(--shadow-sm); transition: var(--transition); position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-light), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform var(--transition); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--cream); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; }
+    .service-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 0.75rem; color: var(--noir); }
+    .service-desc { font-size: 0.9rem; color: var(--warm-gray); line-height: 1.7; }
+    .service-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); transition: gap var(--transition); }
+    .service-link:hover { gap: 0.75rem; }
+
+    /* GALLERY */
+    .gallery { background: var(--noir); color: var(--cream); }
+    .gallery .label-gold { color: var(--gold-light); }
+    .gallery .display-lg { color: var(--cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+    .gallery-item { border-radius: var(--radius-md); overflow: hidden; position: relative; cursor: pointer; }
+    .gallery-item:nth-child(1) { grid-row: span 2; }
+    .gallery-item:nth-child(4) { grid-column: span 2; }
+    .gallery-item:nth-child(7) { grid-column: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.6s ease; display: block; }
+    .gallery-item:nth-child(1) { min-height: 420px; }
+    .gallery-item:nth-child(1) img { height: 100%; min-height: 420px; }
+    .gallery-item:not(:nth-child(1)) img { min-height: 200px; }
+    .gallery-item:nth-child(4) img { min-height: 200px; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-overlay { position: absolute; inset: 0; background: rgba(26,23,20,0); display: flex; align-items: flex-end; padding: 1.25rem; transition: var(--transition); }
+    .gallery-item:hover .gallery-overlay { background: rgba(26,23,20,0.45); }
+    .gallery-overlay-text { color: var(--white); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0; transform: translateY(8px); transition: var(--transition); font-family: var(--font-body); }
+    .gallery-item:hover .gallery-overlay-text { opacity: 1; transform: translateY(0); }
+    .gallery-cta { text-align: center; margin-top: 2.5rem; }
+
+    /* PHOTO STRIP */
+    .photo-strip { background: var(--cream-mid); padding: 3rem 0; overflow: hidden; }
+    .photo-strip-track { display: flex; gap: 1rem; animation: stripScroll 30s linear infinite; width: max-content; }
+    .photo-strip-track:hover { animation-play-state: paused; }
+    .photo-strip-item { width: 260px; height: 340px; border-radius: var(--radius-md); overflow: hidden; flex-shrink: 0; }
+    .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    @keyframes stripScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--cream-mid); }
+    .rating-hero { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; padding: 2.5rem 3rem; background: var(--white); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); }
+    .rating-big { font-family: var(--font-display); font-size: 5rem; font-weight: 300; line-height: 1; color: var(--noir); }
+    .rating-big span { color: var(--gold); }
+    .rating-details { flex: 1; }
+    .rating-stars { display: flex; gap: 4px; color: var(--gold); margin-bottom: 0.5rem; }
+    .rating-stars svg { width: 22px; height: 22px; fill: currentColor; }
+    .rating-count { font-size: 0.85rem; color: var(--warm-gray); }
+    .rating-count strong { color: var(--noir); }
+    .rating-bar-wrap { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+    .rating-bar-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; color: var(--warm-gray); }
+    .rating-bar { flex: 1; height: 4px; background: var(--cream-deep); border-radius: 4px; overflow: hidden; }
+    .rating-bar-fill { height: 100%; background: var(--gold); border-radius: 4px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 1.25rem; }
+    .testimonial-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .testimonial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .testimonial-stars { display: flex; gap: 3px; color: var(--gold); margin-bottom: 1rem; }
+    .testimonial-stars svg { width: 14px; height: 14px; fill: currentColor; }
+    .testimonial-text { font-size: 0.925rem; line-height: 1.75; color: var(--charcoal); margin-bottom: 1.5rem; font-style: italic; }
+    .testimonial-text::before { content: '\201C'; color: var(--gold); font-size: 1.4rem; line-height: 0; vertical-align: -0.4em; margin-right: 2px; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+    .testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--cream-deep); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 500; color: var(--gold-deep); flex-shrink: 0; }
+    .testimonial-name { font-size: 0.875rem; font-weight: 500; color: var(--noir); }
+    .testimonial-date { font-size: 0.75rem; color: var(--warm-gray); }
+    .testimonials-cta { text-align: center; margin-top: 2.5rem; }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--noir); color: var(--white); position: relative; overflow: hidden; }
+    .cta-banner::before { content: ''; position: absolute; top: -40%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%); pointer-events: none; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .cta-text .display-md { color: var(--white); }
+    .cta-text .label-gold { color: var(--gold-light); margin-bottom: 0.75rem; }
+    .cta-text p { color: rgba(255,255,255,0.65); margin-top: 0.75rem; max-width: 460px; }
+    .cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
+
+    /* INFO */
+    .info { background: var(--white); }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .hours-list { margin-top: 1.5rem; }
+    .hours-row { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 0; border-bottom: 1px solid var(--cream-mid); font-size: 0.9rem; }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { color: var(--charcoal); font-weight: 500; }
+    .hours-time { color: var(--warm-gray); }
+    .hours-closed { color: var(--warm-gray); font-style: italic; }
+    .hours-today { background: var(--cream); margin: 0 -0.75rem; padding: 0.85rem 0.75rem; border-radius: var(--radius-sm); border-bottom: none !important; }
+    .hours-today .hours-day { color: var(--gold-deep); }
+    .hours-today .hours-time { color: var(--noir); font-weight: 500; }
+    .contact-details { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .contact-item { display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; }
+    .contact-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--cream); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); }
+    .contact-icon svg { width: 18px; height: 18px; }
+    .contact-label { color: var(--warm-gray); font-size: 0.75rem; margin-bottom: 0.1rem; }
+    .contact-value { color: var(--noir); font-weight: 500; }
+    .map-placeholder { width: 100%; height: 280px; border-radius: var(--radius-md); overflow: hidden; margin-top: 1.5rem; background: var(--cream-mid); }
+    .map-placeholder iframe { width: 100%; height: 100%; border: none; }
+
+    /* CONTACT */
+    .contact { background: var(--cream); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .form-input, .form-textarea, .form-select { width: 100%; padding: 0.85rem 1.1rem; border: 1.5px solid var(--cream-deep); border-radius: var(--radius-md); background: var(--white); color: var(--noir); font-size: 0.9rem; transition: border-color var(--transition), box-shadow var(--transition); appearance: none; }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,169,110,0.15); }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--warm-gray); }
+    .form-textarea { min-height: 130px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-note { font-size: 0.75rem; color: var(--warm-gray); margin-top: 0.75rem; }
+    .form-success { display: none; text-align: center; padding: 3rem; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .contact-info-panel { padding: 2rem 0; }
+    .contact-highlight { background: var(--noir); color: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem; }
+    .contact-highlight .label-gold { color: var(--gold-light); margin-bottom: 0.75rem; }
+    .contact-highlight .display-md { color: var(--white); font-size: 1.8rem; }
+    .contact-highlight p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-top: 0.75rem; }
+    .contact-actions { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+    .contact-action-btn { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 500; transition: var(--transition); }
+    .contact-action-btn:hover { transform: translateX(4px); }
+    .btn-call { background: var(--gold); color: var(--white); }
+    .btn-call:hover { background: var(--gold-deep); }
+    .btn-wa { background: #25D366; color: var(--white); }
+    .btn-wa:hover { background: #1da851; }
+    .btn-email { background: var(--cream); color: var(--noir); border: 1.5px solid var(--cream-deep); }
+    .btn-email:hover { background: var(--cream-mid); }
+    .contact-action-icon { width: 36px; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .contact-action-icon svg { width: 20px; height: 20px; }
+
+    /* FAQ */
+    .faq { background: var(--white); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--cream-deep); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 0; cursor: pointer; font-size: 0.975rem; font-weight: 500; color: var(--noir); gap: 1rem; width: 100%; text-align: left; }
+    .faq-question:hover { color: var(--gold-deep); }
+    .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; color: var(--gold); transition: transform var(--transition); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer p { font-size: 0.9rem; color: var(--charcoal); line-height: 1.8; padding-bottom: 1.5rem; }
+
+    /* FLOATING CTA */
+    .floating-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: var(--white); border-top: 1px solid var(--cream-deep); padding: 0.75rem 1.25rem; box-shadow: 0 -4px 20px rgba(26,23,20,0.08); }
+    .floating-cta-inner { display: flex; gap: 0.75rem; }
+    .floating-cta .btn { flex: 1; justify-content: center; padding: 0.9rem 1rem; font-size: 0.85rem; }
+
+    /* FOOTER */
+    .footer { background: var(--noir); color: rgba(255,255,255,0.6); padding: 4rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .nav-logo { color: var(--cream); margin-bottom: 1rem; }
+    .footer-desc { font-size: 0.85rem; line-height: 1.8; max-width: 280px; }
+    .footer-col h4 { font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.875rem; transition: color var(--transition); }
+    .footer-links a:hover { color: var(--cream); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-legal { font-size: 0.8rem; }
+    .footer-legal a { transition: color var(--transition); }
+    .footer-legal a:hover { color: var(--cream); }
+
+    /* ANIMATIONS */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 70vw; order: -1; }
+      .info-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .about-values { gap: 1rem; }
+      .rating-hero { flex-direction: column; text-align: center; }
+      .rating-bar-wrap { display: none; }
+      .cta-inner { flex-direction: column; text-align: center; }
+      .cta-actions { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .floating-cta { display: block; }
+      body { padding-bottom: 80px; }
+      .form-row { grid-template-columns: 1fr; }
+      .photo-strip-item { width: 200px; height: 260px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .gallery-item:nth-child(4) { grid-column: span 2; }
+    }
+
+    .skip-link { position: absolute; top: -100%; left: 1rem; background: var(--noir); color: var(--white); padding: 0.5rem 1rem; border-radius: 0 0 var(--radius-sm) var(--radius-sm); font-size: 0.875rem; z-index: 999; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal" id="nav">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="/" class="nav-logo" aria-label="HONEY HAIR Estilistas - Inicio">
+            HONEY HAIR
+            <span>Estilistas</span>
+          </a>
+          <ul class="nav-links" role="list">
+            <li><a href="#nosotros">Nosotras</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Trabajos</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+          <div class="nav-cta">
+            <a href="tel:+34618400107" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.8 19.79 19.79 0 012 1.18 2 2 0 014 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              Llamar
+            </a>
+            <a href="#reserva" class="btn btn-gold">Reservar cita</a>
+          </div>
+          <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">✕</button>
+    <a href="#nosotros" class="mobile-link">Nosotras</a>
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#galeria" class="mobile-link">Trabajos</a>
+    <a href="#opiniones" class="mobile-link">Opiniones</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="#reserva" class="btn btn-gold btn-lg" style="margin-top:1rem;">Reservar cita</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Bienvenida">
+      <div class="hero-left">
+        <div class="hero-tag fade-in">
+          <span class="hero-tag-line" aria-hidden="true"></span>
+          <span class="label-gold">Salón de Belleza · Fuenlabrada</span>
+        </div>
+        <h1 class="display-xl hero-title fade-in fade-in-delay-1">
+          Tu mejor<br>versión<br><em>te espera.</em>
+        </h1>
+        <p class="body-lg hero-desc fade-in fade-in-delay-2">
+          Especialistas en color, extensiones y transformación capilar. En HONEY HAIR, cada visita es una experiencia pensada para ti.
+        </p>
+        <div class="hero-actions fade-in fade-in-delay-3">
+          <a href="#reserva" class="btn btn-primary btn-lg">
+            Reservar mi cita
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#servicios" class="btn btn-outline btn-lg">Ver servicios</a>
+        </div>
+        <div class="hero-rating fade-in fade-in-delay-4" aria-label="Valoración 4.9 sobre 5">
+          <div class="hero-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="hero-rating-text"><strong>4.9/5</strong> · Más de <strong>150 clientes satisfechas</strong></p>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <!-- Foto principal del salón desde Google Maps -->
+        <img
+          src="https://lh3.googleusercontent.com/p/AF1QipPCxYcG5Lcx1daaqGlcGQHeak0UMCH0P9yNiBUo=w1200-h1600-k-no"
+          alt="Interior del salón HONEY HAIR Estilistas en Fuenlabrada"
+          loading="eager"
+          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#EDE3D1 0%,#F5EFE3 50%,#E8D5B0 100%)';"
+        />
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-line"></div>
+        <span>Descubre</span>
+      </div>
+    </section>
+
+    <!-- PHOTO STRIP (scrolling) -->
+    <section class="photo-strip" aria-label="Galería de fotos del salón">
+      <div class="photo-strip-track" id="stripTrack">
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNotzLrZ7Ow4E3_bpR8w9sSKjurR_hHMMg2U7Pd=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN542zF3oPTGpH3onnfbz__TadFpzkncnWHig4I=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMNGZuxGqYWh83hSvL0FxBFCZL2QG3n5lewMm2N=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMmZtE7ChU3lkVDejeUVzkQwg8FBGymikpTgv5P=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipORsWbd3T3Qo8o96CJXwc8sF2NtiK1N7Rba5vkE=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN6x0foCd_xnB1e0HQh7dCr7MIQrh47p_3bXlY8=w500-h500-k-no" alt="Logotipo HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPGH2-zkvpMNZfCbOe6PvYPp3ofmW6j8bTMYko6=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMX2yna8SuCK6ZElLx2ruE7EjhllX5b9NYvD4F1=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHkJxBJ6eBTKD22jl-8hw1fcQNvHEVugIgXSEWJLtiUV6lYZ1gR0dFVeXNYwKCbqap3OwssD7_Ct0sbHbH7JWzWU9rzSmWml5E_NFQGm6O4H_PQaRU8G3Dgg6j10P8JYw8LyM7bzq_gAA=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNtsuISEGqCCwwSYc4ybVAmbxNU02YyVgae5TUzChOWekEDdtNRlXxhvZ6Bdvg5I1nxfvlube1yufG0Tt3BDxB9TtzJ5lgrxnucpeh9_cb6q61KphVVajpPjGzWdVVs3-SimkJhFledxSw=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNotzLrZ7Ow4E3_bpR8w9sSKjurR_hHMMg2U7Pd=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN542zF3oPTGpH3onnfbz__TadFpzkncnWHig4I=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMNGZuxGqYWh83hSvL0FxBFCZL2QG3n5lewMm2N=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMmZtE7ChU3lkVDejeUVzkQwg8FBGymikpTgv5P=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipORsWbd3T3Qo8o96CJXwc8sF2NtiK1N7Rba5vkE=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN6x0foCd_xnB1e0HQh7dCr7MIQrh47p_3bXlY8=w500-h500-k-no" alt="Logotipo HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPGH2-zkvpMNZfCbOe6PvYPp3ofmW6j8bTMYko6=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMX2yna8SuCK6ZElLx2ruE7EjhllX5b9NYvD4F1=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHkJxBJ6eBTKD22jl-8hw1fcQNvHEVugIgXSEWJLtiUV6lYZ1gR0dFVeXNYwKCbqap3OwssD7_Ct0sbHbH7JWzWU9rzSmWml5E_NFQGm6O4H_PQaRU8G3Dgg6j10P8JYw8LyM7bzq_gAA=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+        <div class="photo-strip-item">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNtsuISEGqCCwwSYc4ybVAmbxNU02YyVgae5TUzChOWekEDdtNRlXxhvZ6Bdvg5I1nxfvlube1yufG0Tt3BDxB9TtzJ5lgrxnucpeh9_cb6q61KphVVajpPjGzWdVVs3-SimkJhFledxSw=w600-h800-k-no" alt="Trabajo de peluquería - Honey Hair" loading="lazy" onerror="this.parentElement.style.background='var(--cream-deep)'" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="nosotros" aria-labelledby="about-title">
+      <div class="container">
+        <div class="grid-2 about-grid">
+          <div class="about-image-wrap fade-in">
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8dhyDccIG2OoyhW5fcXjrDPHZWvCByMVVXIFB6rF5YAXfT1z2sfGErrFYWV3OiEVTivgoSkBNW0G5-jnXgMLIG4ju7ymW7Wg-NNTPsYuhxnANAru7kKJR1qO50Zf_hPVm8hJC_SH38vKD=w800-h1067-k-no"
+              alt="Interior del salón HONEY HAIR Estilistas"
+              loading="lazy"
+              onerror="this.style.display='none';"
+            />
+            <div class="about-badge">
+              <div class="about-badge-num">4.9</div>
+              <div class="about-badge-label">Valoración media</div>
+            </div>
+          </div>
+
+          <div class="about-content fade-in fade-in-delay-1">
+            <p class="label-gold">Sobre nosotras</p>
+            <h2 class="display-lg" id="about-title">Donde el color<br>se convierte en arte.</h2>
+            <div class="divider divider-left" aria-hidden="true"></div>
+            <p class="body-lg" style="margin-bottom:1rem;">
+              En HONEY HAIR somos mucho más que un salón de peluquería. Somos el espacio donde cada clienta encuentra su mejor versión: escuchada, cuidada y transformada con precisión y cariño.
+            </p>
+            <p class="body-md">
+              Ubicadas en el corazón de Fuenlabrada, llevamos años especializándonos en coloración, extensiones y tratamientos capilares de alto nivel. Trabajamos con las últimas técnicas y los mejores productos para que tu cabello no solo se vea espectacular, sino que lo esté de verdad.
+            </p>
+            <div class="about-values" aria-label="Logros del salón">
+              <div class="about-value">
+                <div class="about-value-num">+150</div>
+                <div class="about-value-label">Reseñas positivas</div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-num">4.9</div>
+                <div class="about-value-label">Puntuación media</div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-num">100%</div>
+                <div class="about-value-label">Dedicación personal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <p class="label-gold">Nuestros servicios</p>
+          <h2 class="display-lg" id="services-title">Todo lo que tu cabello necesita</h2>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="body-md" style="max-width:560px;margin:0 auto;">Desde una coloración que te cambia la vida hasta extensiones que te darán el volumen que siempre quisiste. En HONEY HAIR, cada servicio es un proyecto personalizado.</p>
+        </div>
+        <div class="grid-3" role="list">
+          <article class="service-card fade-in" role="listitem">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h3 class="service-title">Coloración & Color</h3>
+            <p class="service-desc">Rubios, balayage, mechas, californianas, tintes personalizados… Llevamos el color al siguiente nivel con técnicas de precisión y resultados que duran.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+          <article class="service-card fade-in fade-in-delay-1" role="listitem">
+            <div class="service-icon" aria-hidden="true">✨</div>
+            <h3 class="service-title">Extensiones</h3>
+            <p class="service-desc">Añade longitud, volumen y movimiento con extensiones naturales colocadas con la máxima delicadeza. Resultados imperceptibles, aspecto completamente natural.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+          <article class="service-card fade-in fade-in-delay-2" role="listitem">
+            <div class="service-icon" aria-hidden="true">💧</div>
+            <h3 class="service-title">Tratamientos Capilares</h3>
+            <p class="service-desc">Hidratación profunda, keratina, botox capilar y más. Rescatamos tu cabello y lo devolvemos a su mejor estado, desde las puntas hasta la raíz.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+          <article class="service-card fade-in" role="listitem">
+            <div class="service-icon" aria-hidden="true">💄</div>
+            <h3 class="service-title">Maquillaje para Eventos</h3>
+            <p class="service-desc">Bodas, comuniones, graduaciones, eventos especiales… Un maquillaje profesional pensado para que luzcas perfecta durante todas las horas que lo necesites.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+          <article class="service-card fade-in fade-in-delay-1" role="listitem">
+            <div class="service-icon" aria-hidden="true">👑</div>
+            <h3 class="service-title">Peinados & Recogidos</h3>
+            <p class="service-desc">Peinados de novia, media melena con rulos, recogidos elegantes… Creamos el look que imaginaste y más. Perfectos para cualquier ocasión especial.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+          <article class="service-card fade-in fade-in-delay-2" role="listitem">
+            <div class="service-icon" aria-hidden="true">✂️</div>
+            <h3 class="service-title">Corte & Acabado</h3>
+            <p class="service-desc">El corte que realza tu cara y complementa tu estilo de vida. Un buen corte es la base de todo look, y aquí lo hacemos con la atención que mereces.</p>
+            <a href="#reserva" class="service-link">Reservar →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery section" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="label-gold">Nuestros trabajos</p>
+          <h2 class="display-lg" id="gallery-title">Cada transformación,<br>una historia.</h2>
+          <div class="divider divider-left" aria-hidden="true"></div>
+          <p style="color:rgba(255,255,255,0.55);max-width:480px;font-size:0.9rem;line-height:1.8;">Más de 150 clientes satisfechas avalan nuestro trabajo. Aquí puedes ver algunos de nuestros proyectos más representativos.</p>
+        </div>
+
+        <div class="gallery-grid" role="list" aria-label="Galería de trabajos del salón">
+          <div class="gallery-item fade-in" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPCxYcG5Lcx1daaqGlcGQHeak0UMCH0P9yNiBUo=w800-h1067-k-no" alt="Trabajo de coloración en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Coloración / Balayage</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNotzLrZ7Ow4E3_bpR8w9sSKjurR_hHMMg2U7Pd=w600-h800-k-no" alt="Extensiones en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Extensiones</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-2" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipN542zF3oPTGpH3onnfbz__TadFpzkncnWHig4I=w600-h800-k-no" alt="Tratamiento capilar en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Tratamientos</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMNGZuxGqYWh83hSvL0FxBFCZL2QG3n5lewMm2N=w800-h1067-k-no" alt="Maquillaje y peinado en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Maquillaje & Eventos</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-2" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMmZtE7ChU3lkVDejeUVzkQwg8FBGymikpTgv5P=w800-h1067-k-no" alt="Peinado y recogido en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Peinados & Recogidos</span></div>
+          </div>
+          <div class="gallery-item fade-in" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPGH2-zkvpMNZfCbOe6PvYPp3ofmW6j8bTMYko6=w800-h1067-k-no" alt="Trabajo de coloración en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Color & Técnica</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1" role="listitem">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMX2yna8SuCK6ZElLx2ruE7EjhllX5b9NYvD4F1=w600-h800-k-no" alt="Trabajo de peluquería en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Transformación</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-2" role="listitem">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHkJxBJ6eBTKD22jl-8hw1fcQNvHEVugIgXSEWJLtiUV6lYZ1gR0dFVeXNYwKCbqap3OwssD7_Ct0sbHbH7JWzWU9rzSmWml5E_NFQGm6O4H_PQaRU8G3Dgg6j10P8JYw8LyM7bzq_gAA=w600-h800-k-no" alt="Trabajo en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Acabado profesional</span></div>
+          </div>
+          <div class="gallery-item fade-in fade-in-delay-1" role="listitem">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNtsuISEGqCCwwSYc4ybVAmbxNU02YyVgae5TUzChOWekEDdtNRlXxhvZ6Bdvg5I1nxfvlube1yufG0Tt3BDxB9TtzJ5lgrxnucpeh9_cb6q61KphVVajpPjGzWdVVs3-SimkJhFledxSw=w600-h800-k-no" alt="Trabajo en HONEY HAIR Estilistas" loading="lazy" onerror="this.parentElement.style.background='#2C2822'" />
+            <div class="gallery-overlay"><span class="gallery-overlay-text">Resultado natural</span></div>
+          </div>
+        </div>
+
+        <div class="gallery-cta fade-in">
+          <a href="https://www.google.com/maps/place/HONEY+HAIR+Estilistas/@40.2794636,-3.7979191,17z" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ver más fotos en Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section" id="opiniones" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <p class="label-gold">Opiniones reales</p>
+          <h2 class="display-lg" id="testimonials-title">Lo que dicen nuestras clientas</h2>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="rating-hero fade-in">
+          <div><div class="rating-big">4.9<span>/5</span></div></div>
+          <div class="rating-details">
+            <div class="rating-stars" aria-label="5 estrellas">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="rating-count">Basado en <strong>+150 reseñas verificadas</strong> en Google</p>
+          </div>
+          <div class="rating-bar-wrap">
+            <div class="rating-bar-row"><span>5★</span><div class="rating-bar"><div class="rating-bar-fill" style="width:90%"></div></div></div>
+            <div class="rating-bar-row"><span>4★</span><div class="rating-bar"><div class="rating-bar-fill" style="width:7%"></div></div></div>
+            <div class="rating-bar-row"><span>3★</span><div class="rating-bar"><div class="rating-bar-fill" style="width:2%"></div></div></div>
+            <div class="rating-bar-row"><span>2★</span><div class="rating-bar"><div class="rating-bar-fill" style="width:1%"></div></div></div>
+            <div class="rating-bar-row"><span>1★</span><div class="rating-bar"><div class="rating-bar-fill" style="width:0%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid" role="list">
+          <article class="testimonial-card fade-in" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">El resultado de mi coloración superó todas mis expectativas. Llevan tiempo siendo mi salón de confianza y nunca me han defraudado. El ambiente es increíble y te hacen sentir especial desde que entras.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AL</div>
+              <div><div class="testimonial-name">Ana L.</div><div class="testimonial-date">Reseña en Google · 5 estrellas</div></div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-in fade-in-delay-1" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">Me hicieron las extensiones y el resultado fue espectacular. Muy profesionales y atentas. Me explicaron todo el proceso y me dieron consejos para el mantenimiento en casa. Sin duda volvería.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MG</div>
+              <div><div class="testimonial-name">María G.</div><div class="testimonial-date">Reseña en Google · 5 estrellas</div></div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-in fade-in-delay-2" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">Fui para mi maquillaje de boda y fue una experiencia preciosa. Muy detallistas y perfeccionistas. El maquillaje duró todo el día sin retocarlo. ¡Repetiré seguro para cada evento importante!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SR</div>
+              <div><div class="testimonial-name">Sara R.</div><div class="testimonial-date">Reseña en Google · 5 estrellas</div></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonials-cta text-center fade-in" style="margin-top:2.5rem;">
+          <a href="https://www.google.com/maps/place/HONEY+HAIR+Estilistas/@40.2794636,-3.7979191,17z" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            Ver todas las reseñas en Google
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner section-sm" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-text fade-in">
+            <p class="label-gold">Tu transformación te espera</p>
+            <h2 class="display-md" id="cta-title">¿Lista para el cambio?</h2>
+            <p>Reserva tu cita ahora y descubre lo que podemos hacer por tu imagen. Estamos en Fuenlabrada, esperándote.</p>
+          </div>
+          <div class="cta-actions fade-in fade-in-delay-1">
+            <a href="#reserva" class="btn btn-gold btn-lg">Reservar cita</a>
+            <a href="tel:+34618400107" class="btn btn-outline-white btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.8 19.79 19.79 0 012 1.18 2 2 0 014 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              Llamar ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="info section" id="horario" aria-labelledby="info-title">
+      <div class="container">
+        <div class="info-grid">
+          <div class="fade-in">
+            <p class="label-gold">Horario y ubicación</p>
+            <h2 class="display-md" id="info-title">Encuéntranos en<br>Fuenlabrada</h2>
+            <div class="divider divider-left"></div>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div><div class="contact-label">Dirección</div><div class="contact-value">C. de las Panaderas, 1<br>28944 Fuenlabrada, Madrid</div></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.8 19.79 19.79 0 012 1.18 2 2 0 014 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+                <div><div class="contact-label">Teléfono</div><a href="tel:+34618400107" class="contact-value" style="color:var(--gold-deep);">+34 618 40 01 07</a></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                <div><div class="contact-label">Email</div><a href="mailto:honeyhairestilistas1@gmail.com" class="contact-value" style="color:var(--gold-deep);font-size:0.85rem;">honeyhairestilistas1@gmail.com</a></div>
+              </div>
+            </div>
+            <nav class="hours-list" aria-label="Horario de apertura">
+              <div class="hours-row"><span class="hours-day">Lunes</span><span class="hours-closed">Cerrado</span></div>
+              <div class="hours-row hours-today"><span class="hours-day">Martes – Viernes</span><span class="hours-time">10:00 – 19:00</span></div>
+              <div class="hours-row"><span class="hours-day">Sábado</span><span class="hours-time">10:00 – 14:00</span></div>
+              <div class="hours-row"><span class="hours-day">Domingo</span><span class="hours-closed">Cerrado</span></div>
+            </nav>
+          </div>
+          <div class="fade-in fade-in-delay-1">
+            <div class="map-placeholder">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.8!2d-3.7979191!3d40.2794636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418b2011f8635d%3A0xbc664b31dd1f09a1!2sHONEY%20HAIR%20Estilistas!5e0!3m2!1ses!2ses!4v1700000000000"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa HONEY HAIR Estilistas en Fuenlabrada">
+              </iframe>
+            </div>
+            <div style="margin-top:1rem;text-align:center;">
+              <a href="https://maps.google.com/?q=HONEY+HAIR+Estilistas+Fuenlabrada" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.8rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING / CONTACT -->
+    <section class="contact section" id="reserva" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-panel fade-in">
+            <p class="label-gold">Reserva tu cita</p>
+            <h2 class="display-md" id="contact-title">Cuéntanos<br>qué necesitas.</h2>
+            <div class="divider divider-left"></div>
+            <p class="body-md" style="margin-bottom:2rem;">Escríbenos o llámanos y nos encargamos de todo. También puedes enviarnos un mensaje y te contactamos para confirmar tu cita en el horario que mejor te venga.</p>
+            <div class="contact-highlight">
+              <p class="label-gold">Preferencia rápida</p>
+              <p class="display-md" style="font-size:1.5rem;color:var(--white);">¿Prefieres contactar<br>directamente?</p>
+              <p>Llámanos o escríbenos por WhatsApp y te atendemos de forma inmediata.</p>
+              <div class="contact-actions">
+                <a href="tel:+34618400107" class="contact-action-btn btn-call">
+                  <div class="contact-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.8 19.79 19.79 0 012 1.18 2 2 0 014 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+                  <span>Llamar: +34 618 40 01 07</span>
+                </a>
+                <a href="https://wa.me/34618400107?text=Hola!%20Me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20HONEY%20HAIR" target="_blank" rel="noopener noreferrer" class="contact-action-btn btn-wa">
+                  <div class="contact-action-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+                  <span>Escribir por WhatsApp</span>
+                </a>
+                <a href="mailto:honeyhairestilistas1@gmail.com" class="contact-action-btn btn-email">
+                  <div class="contact-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                  <span>Enviar email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in fade-in-delay-1">
+            <form id="contactForm" novalidate aria-label="Formulario de reserva de cita">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Nombre</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="600 000 000" required autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="service">Servicio de interés</label>
+                <select id="service" name="service" class="form-select" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="color">Coloración / Color</option>
+                  <option value="extensiones">Extensiones</option>
+                  <option value="tratamiento">Tratamiento capilar</option>
+                  <option value="maquillaje">Maquillaje para evento</option>
+                  <option value="peinado">Peinado / Recogido</option>
+                  <option value="corte">Corte y acabado</option>
+                  <option value="otro">Otro / Consulta</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Mensaje</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos lo que necesitas: tipo de color, longitud del cabello, fecha del evento…"></textarea>
+              </div>
+              <div class="form-group">
+                <label style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.8rem;color:var(--charcoal);cursor:pointer;">
+                  <input type="checkbox" required name="privacy" style="margin-top:2px;accent-color:var(--gold);" />
+                  <span>He leído y acepto la <a href="#privacidad" style="color:var(--gold-deep);text-decoration:underline;">política de privacidad</a>.</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-gold btn-lg" style="width:100%;justify-content:center;">
+                Enviar solicitud de cita
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <p class="form-note" style="text-align:center;margin-top:1rem;">Te responderemos en menos de 24 horas en horario de apertura.</p>
+            </form>
+            <div class="form-success" id="formSuccess" role="alert">
+              <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
+              <h3 style="font-family:var(--font-display);font-size:1.8rem;font-weight:400;margin-bottom:0.5rem;">¡Mensaje enviado!</h3>
+              <p style="color:var(--charcoal);font-size:0.9rem;">Gracias por contactar con HONEY HAIR. Te responderemos lo antes posible para confirmar tu cita.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <p class="label-gold">Preguntas frecuentes</p>
+          <h2 class="display-lg" id="faq-title">¿Tienes alguna duda?</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="faq-list fade-in">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1"><span>¿Cómo puedo reservar una cita?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-1"><p>Puedes reservar tu cita llamándonos al <a href="tel:+34618400107" style="color:var(--gold-deep);">+34 618 40 01 07</a>, enviándonos un mensaje por WhatsApp, escribiendo al email <a href="mailto:honeyhairestilistas1@gmail.com" style="color:var(--gold-deep);">honeyhairestilistas1@gmail.com</a>, o rellenando el formulario de contacto de esta página.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2"><span>¿Cuánto tiempo dura un servicio de coloración?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-2"><p>Depende del tipo de coloración y de la longitud y densidad del cabello. Un tinte completo puede llevar entre 1,5 y 2 horas; un balayage o mechas puede requerir entre 3 y 4 horas. Siempre valoramos el tiempo necesario en la consulta previa.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3"><span>¿Hacéis consultas o asesorías de color gratuitas?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-3"><p>Sí. Antes de cualquier servicio de color o extensiones realizamos una valoración personalizada del cabello para recomendarte la técnica más adecuada. Puedes consultarnos también por teléfono o WhatsApp si tienes dudas previas.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4"><span>¿Qué tipo de extensiones trabajáis?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-4"><p>Trabajamos con extensiones de cabello natural de alta calidad, con diferentes métodos de colocación. En la consulta valoramos cuál es la mejor opción para tu tipo de cabello y el resultado que buscas.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5"><span>¿Necesito reservar con antelación para el maquillaje de un evento?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-5"><p>Sí, especialmente en temporada alta (bodas, comuniones, Navidad). Te recomendamos contactar con nosotras con la mayor antelación posible para asegurar tu fecha. La agenda se llena rápido en épocas de eventos.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6"><span>¿Dónde estáis ubicadas exactamente?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer" id="faq-6"><p>Estamos en la <strong>C. de las Panaderas, 1, 28944 Fuenlabrada, Madrid</strong>. Puedes encontrarnos buscando "HONEY HAIR Estilistas" en Google Maps.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto" aria-labelledby="footer-brand">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" id="footer-brand">HONEY HAIR<span>Estilistas</span></div>
+          <p class="footer-desc">Salón de peluquería y belleza en Fuenlabrada, Madrid. Especialistas en coloración, extensiones, tratamientos capilares y maquillaje para eventos.</p>
+          <address style="font-style:normal;margin-top:1.5rem;font-size:0.8rem;line-height:1.8;">
+            C. de las Panaderas, 1<br>28944 Fuenlabrada, Madrid<br>
+            <a href="tel:+34618400107" style="color:var(--gold-light);">+34 618 40 01 07</a><br>
+            <a href="mailto:honeyhairestilistas1@gmail.com" style="color:rgba(255,255,255,0.5);font-size:0.75rem;">honeyhairestilistas1@gmail.com</a>
+          </address>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Coloración & Color</a></li>
+            <li><a href="#servicios">Extensiones</a></li>
+            <li><a href="#servicios">Tratamientos Capilares</a></li>
+            <li><a href="#servicios">Maquillaje para Eventos</a></li>
+            <li><a href="#servicios">Peinados & Recogidos</a></li>
+            <li><a href="#servicios">Corte & Acabado</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Salón</h4>
+          <ul class="footer-links">
+            <li><a href="#nosotros">Sobre nosotras</a></li>
+            <li><a href="#galeria">Nuestros trabajos</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#horario">Horario</a></li>
+            <li><a href="#reserva">Reservar cita</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+          <h4 style="margin-top:2rem;">Horario</h4>
+          <ul class="footer-links">
+            <li style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Mar – Vie: 10:00 – 19:00</li>
+            <li style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Sábado: 10:00 – 14:00</li>
+            <li style="color:rgba(255,255,255,0.3);font-size:0.8rem;">Lun y Dom: Cerrado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">© 2025 HONEY HAIR Estilistas · Todos los derechos reservados · <a href="#privacidad" id="privacidad">Política de privacidad</a> · <a href="#cookies">Política de cookies</a></p>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Peluquería en Fuenlabrada · Salón de belleza Madrid Sur</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" role="complementary">
+    <div class="floating-cta-inner">
+      <a href="tel:+34618400107" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.8 19.79 19.79 0 012 1.18 2 2 0 014 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Llamar
+      </a>
+      <a href="#reserva" class="btn btn-gold">Reservar cita</a>
+    </div>
+  </div>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+
+    // Mobile nav
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const openMobileNav = () => { mobileNav.classList.add('open'); mobileNav.setAttribute('aria-hidden','false'); burgerBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; };
+    const closeMobileNav = () => { mobileNav.classList.remove('open'); mobileNav.setAttribute('aria-hidden','true'); burgerBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+    burgerBtn.addEventListener('click', openMobileNav);
+    mobileNavClose.addEventListener('click', closeMobileNav);
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMobileNav));
+    document.addEventListener('keydown', e => { if(e.key==='Escape' && mobileNav.classList.contains('open')) closeMobileNav(); });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+        if(!isOpen){ item.classList.add('open'); item.querySelector('.faq-question').setAttribute('aria-expanded','true'); }
+      });
+    });
+
+    // Contact form con EmailJS
+    // ============================================================
+    // CONFIGURACIÓN EMAILJS — rellena tus datos:
+    // 1. Ve a https://www.emailjs.com y crea cuenta gratuita
+    // 2. Crea un Email Service (Gmail recomendado) → copia el Service ID
+    // 3. Crea un Email Template con las variables: {{from_name}}, {{from_email}}, {{phone}}, {{service}}, {{message}}
+    //    → copia el Template ID
+    // 4. En Account → API Keys → copia tu Public Key
+    // Sustituye los 3 valores de abajo:
+    const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';    // ← pega aquí
+    const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';   // ← pega aquí
+    const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';  // ← pega aquí
+    // ============================================================
+
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      let valid = true;
+      form.querySelectorAll('[required]').forEach(f => {
+        if (!f.value.trim() || (f.type === 'checkbox' && !f.checked)) {
+          f.style.borderColor = '#e24b4a'; valid = false;
+        } else { f.style.borderColor = ''; }
+      });
+      if (!valid) return;
+
+      const btn = form.querySelector('[type="submit"]');
+      const btnOrigText = btn.innerHTML;
+      btn.innerHTML = 'Enviando… <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>';
+      btn.disabled = true;
+      if (formError) formError.style.display = 'none';
+
+      try {
+        if (typeof emailjs === 'undefined') throw new Error('EmailJS no cargado');
+        await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } catch (err) {
+        console.error('EmailJS error:', err);
+        btn.innerHTML = btnOrigText;
+        btn.disabled = false;
+        if (formError) formError.style.display = 'block';
+      }
+    });
+    form.querySelectorAll('input,select,textarea').forEach(f => f.addEventListener('input', () => f.style.borderColor = ''));
+
+    // Páginas legales — modal
+    const legalModal = document.getElementById('legalModal');
+    const legalModalTitle = document.getElementById('legalModalTitle');
+    const legalModalBody = document.getElementById('legalModalBody');
+    const legalModalClose = document.getElementById('legalModalClose');
+
+    const legalContent = {
+      privacidad: {
+        title: 'Política de Privacidad',
+        body: `
+          <p><strong>Responsable del tratamiento:</strong> HONEY HAIR Estilistas · C. de las Panaderas, 1, 28944 Fuenlabrada, Madrid · honeyhairestilistas1@gmail.com</p>
+          <h4>Finalidad del tratamiento</h4>
+          <p>Los datos personales que nos facilites a través del formulario de contacto serán utilizados exclusivamente para gestionar tu solicitud de cita o consulta y ponernos en contacto contigo para confirmar tu reserva.</p>
+          <h4>Base legal</h4>
+          <p>El tratamiento se basa en tu consentimiento expreso al marcar la casilla de aceptación y en la ejecución de una relación precontractual (art. 6.1.a y 6.1.b del RGPD).</p>
+          <h4>Datos recogidos</h4>
+          <p>Nombre, teléfono, email y el contenido de tu mensaje. No se recogen datos especialmente sensibles.</p>
+          <h4>Conservación</h4>
+          <p>Tus datos se conservarán durante el tiempo necesario para gestionar tu solicitud y, en su caso, durante el plazo legalmente establecido.</p>
+          <h4>Destinatarios</h4>
+          <p>No cedemos tus datos a terceros salvo obligación legal. El envío del formulario utiliza el servicio EmailJS (emailjs.com), que actúa como encargado del tratamiento bajo sus propias políticas de privacidad.</p>
+          <h4>Tus derechos</h4>
+          <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad enviando un email a <strong>honeyhairestilistas1@gmail.com</strong> con el asunto "Derechos RGPD". También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+        `
+      },
+      cookies: {
+        title: 'Política de Cookies',
+        body: `
+          <p>Este sitio web puede utilizar cookies técnicas necesarias para su correcto funcionamiento. No utilizamos cookies de seguimiento ni publicitarias.</p>
+          <h4>¿Qué son las cookies?</h4>
+          <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas una web. Sirven para mejorar la experiencia de navegación.</p>
+          <h4>Cookies utilizadas</h4>
+          <ul style="margin-left:1.5rem;margin-top:0.5rem;line-height:2;">
+            <li><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento básico del sitio (sesión, preferencias de navegación). No requieren consentimiento.</li>
+            <li><strong>Google Fonts:</strong> Este sitio carga fuentes tipográficas desde los servidores de Google, lo que puede implicar el registro de tu IP por parte de Google. Consulta la política de privacidad de Google para más información.</li>
+            <li><strong>Google Maps:</strong> El mapa embebido en la sección de ubicación es servido por Google Maps y puede establecer cookies propias de Google.</li>
+          </ul>
+          <h4>¿Cómo desactivar las cookies?</h4>
+          <p>Puedes configurar tu navegador para rechazar o eliminar cookies. Consulta la ayuda de tu navegador para saber cómo hacerlo. Ten en cuenta que desactivar ciertas cookies puede afectar al funcionamiento del sitio.</p>
+        `
+      },
+      aviso: {
+        title: 'Aviso Legal',
+        body: `
+          <h4>Datos identificativos</h4>
+          <p><strong>Nombre comercial:</strong> HONEY HAIR Estilistas<br>
+          <strong>Domicilio:</strong> C. de las Panaderas, 1, 28944 Fuenlabrada, Madrid<br>
+          <strong>Teléfono:</strong> +34 618 40 01 07<br>
+          <strong>Email:</strong> honeyhairestilistas1@gmail.com</p>
+          <h4>Objeto y ámbito de aplicación</h4>
+          <p>El presente Aviso Legal regula el acceso y uso del sitio web de HONEY HAIR Estilistas. El acceso al sitio implica la aceptación plena de las condiciones aquí expuestas.</p>
+          <h4>Propiedad intelectual</h4>
+          <p>Todos los contenidos de este sitio web (textos, imágenes, diseño, código fuente) son propiedad de HONEY HAIR Estilistas o de sus legítimos titulares. Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+          <h4>Responsabilidad</h4>
+          <p>HONEY HAIR Estilistas no se responsabiliza de los daños que pudieran derivarse del uso incorrecto del sitio web. Nos reservamos el derecho de modificar o eliminar contenidos sin previo aviso.</p>
+          <h4>Legislación aplicable</h4>
+          <p>Este aviso legal se rige por la legislación española, en particular por la Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI-CE) y el Reglamento General de Protección de Datos (RGPD).</p>
+        `
+      }
+    };
+
+    document.querySelectorAll('[data-legal]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const key = link.getAttribute('data-legal');
+        const content = legalContent[key];
+        if (!content) return;
+        legalModalTitle.textContent = content.title;
+        legalModalBody.innerHTML = content.body;
+        legalModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    legalModalClose.addEventListener('click', () => {
+      legalModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    legalModal.addEventListener('click', e => {
+      if (e.target === legalModal) { legalModal.classList.remove('open'); document.body.style.overflow = ''; }
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && legalModal.classList.contains('open')) { legalModal.classList.remove('open'); document.body.style.overflow = ''; }
+    });
+  </script>
+</body>
+</html>
